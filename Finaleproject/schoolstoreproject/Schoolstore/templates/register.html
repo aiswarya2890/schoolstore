@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        form,h1{
+       text-align:center;
+        }
+        h2{
+        color:red;
+        text-align:center;
+        background-color:#E7AD90;
+        }
+        h3{
+        text-align:center;
+        }
+
+
+    </style>
+    <title></title>
+</head>
+<body>
+<h1>HELLO WORLD ,IM USING PYTHON DJANGO</h1>
+<h2>LOG IN</h2>
+<form action="register" method="post">
+      {% csrf_token %}
+    <input type="text" name="username" placeholder="enter username"><br>
+    <input type="password" name="password" placeholder="enter password"><br>
+    <input type="password" name="password1" placeholder="confirm your password"><br>
+    <input type="submit">
+</form>
+{% for msg in messages %}
+<h3>{{msg}}</h3>
+{% endfor %}
+</body>
+</html>
